@@ -33,3 +33,4 @@ node_modules/
 
 # Code Buddy Config
 .codebuddy
+cb.config.js
