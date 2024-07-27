@@ -1,0 +1,21 @@
+{
+  "name": "code-buddy-rust",
+  "version": "0.1.0",
+  "description": "A CLI tool for code buddy",
+  "bin": {
+    "cb": "./target/release/cb"
+  },
+  "scripts": {
+    "postinstall": "cargo build --release"
+  },
+  "files": [
+    "target/release/cb"
+  ],
+  "os": [
+    "darwin",
+    "win32"
+  ],
+  "engines": {
+    "node": ">=14"
+  }
+}
