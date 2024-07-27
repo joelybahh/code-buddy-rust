@@ -1,6 +1,6 @@
 mod cli;
-mod config;
 mod commands;
+mod config;
 
 use clap::Parser;
 use dotenv::dotenv;
@@ -11,6 +11,6 @@ async fn main() {
     let cli = cli::Cli::parse();
 
     match cli.command {
-        cli::Commands::Commit => commands::commit::run().await,
+        cli::Commands::Commit(args) => commands::commit::run(args).await,
     }
 }

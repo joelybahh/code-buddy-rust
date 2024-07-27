@@ -1,6 +1,7 @@
-use crate::config;
+use crate::{cli::CommitArgs, config};
 
-pub async fn run() {
+pub async fn run(args: CommitArgs) {
+    println!("Command line arguments: {:?}", args);
     match config::load_config() {
         Ok(config) => {
             println!("API Key: {}", config.api_key);
